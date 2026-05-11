@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111; /* Fundo escuro para destacar a fumaça */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.smoky {
+    display: flex;
+}
+
+.smoky span {
+    display: block;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    cursor: default;
+}
+
+/* Estado de fumaça (quando a classe 'active' for adicionada pelo JS) */
+.smoky span.active {
+    transform: translateY(-150px) translateX(100px) rotate(45deg) scale(2);
+    opacity: 0;
+    filter: blur(20px);
+}
